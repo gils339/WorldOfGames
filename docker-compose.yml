@@ -1,0 +1,12 @@
+version: '3'
+services:
+  my-flask-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5100:80"
+    volumes:
+      - /Users/gilspiegel/PycharmProjects/pythonProject/pythonProject/WorldOfGames:/app  # Mount your app directory into the container
+    environment:
+      - FLASK_ENV=production
